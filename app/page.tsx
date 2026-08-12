@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import {
   ArrowRight,
   Building2,
@@ -106,7 +107,7 @@ export default function Page() {
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-primary/95 text-primary-foreground backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           <button onClick={() => scrollTo('top')} className="flex items-center gap-3 text-left" aria-label="Nestora Realty home"><span className="flex size-9 items-center justify-center rounded-full border border-accent text-accent"><Home size={17} /></span><span className="font-sans text-sm font-bold tracking-[0.2em]">NESTORA <span className="text-accent">REALTY</span></span></button>
-          <div className="hidden items-center gap-7 lg:flex"><button onClick={() => scrollTo('properties')} className="nav-link">Properties</button><button onClick={() => scrollTo('why-us')} className="nav-link">Why Choose Us</button><button onClick={() => scrollTo('about')} className="nav-link">About Us</button><button onClick={() => scrollTo('testimonials')} className="nav-link">Testimonials</button><button onClick={() => scrollTo('contact')} className="nav-link">Contact</button></div>
+          <div className="hidden items-center gap-7 lg:flex"><Link href="/properties" className="nav-link">Properties</Link><Link href="/locations" className="nav-link">Locations</Link><Link href="/services" className="nav-link">Services</Link><Link href="/about" className="nav-link">About</Link><Link href="/blog" className="nav-link">Insights</Link></div>
           <button onClick={() => scrollTo('contact')} className="hidden rounded-md bg-accent px-5 py-3 text-xs font-bold text-accent-foreground transition hover:bg-accent/90 sm:block">Book a Site Visit</button>
           <button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button>
         </div>

@@ -1,0 +1,3 @@
+import { Navbar, Footer, PageHero, LocationCard, CTASection } from '@/components/site'
+import { locations } from '@/lib/site-data'
+export default function LocationsPage(){return <><Navbar/><main><PageHero eyebrow="Neighbourhood intelligence" title="Choose a location that fits the life ahead." copy="From established corridors to Bengaluru’s next growth stories, get a clearer view of where your property search could take you."/><section className="section-shell"><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{locations.map(l=><LocationCard key={l.slug} location={l}/>)}</div></section><CTASection/></main><Footer/></>}

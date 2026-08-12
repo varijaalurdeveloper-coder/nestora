@@ -64,4 +64,8 @@ button, a { cursor: pointer; }
 .section-heading > p { @apply max-w-sm text-sm leading-6 text-muted-foreground; }
 .stat { @apply flex flex-col gap-1 px-4 py-7 text-center first:pl-0 last:pr-0 sm:px-7 lg:py-8; }
 .stat span:last-child { @apply text-[10px] font-bold uppercase tracking-wider text-muted-foreground sm:text-xs; }
+.field { @apply flex flex-col gap-2 text-sm font-medium text-primary; }
+.field input, .field select, .field textarea { @apply rounded-md border border-border bg-background px-4 text-sm font-normal text-foreground outline-none transition placeholder:text-muted-foreground focus:border-accent focus:ring-2 focus:ring-accent/20; }
+.field input, .field select { @apply h-12; }
+.field textarea { @apply py-3; }
 @media (min-width: 1024px) { .stat { @apply px-8; } }
